@@ -14,6 +14,8 @@ import Data.Text (Text)
 import qualified Data.Text as T
 import qualified Data.Vector as V
 
+-- TODO commentary
+
 
 newtype Pointer = Pointer [Text]
     deriving (Eq, Read, Show)

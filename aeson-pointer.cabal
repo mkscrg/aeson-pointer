@@ -1,7 +1,9 @@
 name: aeson-pointer
 version: 0.0.0
-synopsis: JSON pointers over Aeson values, per RFC 6901
--- description: TODO
+synopsis: JSON pointers over Aeson values
+description:
+    This is an implementation of JSON pointers over Aeson values, per RFC
+    6901: <http://tools.ietf.org/html/rfc6901>
 homepage: http://github.com/mkscrg/aeson-pointer
 license: BSD3
 license-file: LICENSE
