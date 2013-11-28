@@ -12,14 +12,13 @@ category: Text, Web, JSON
 build-type: Simple
 extra-source-files:
     README.md
-cabal-version: >= 1.10
+cabal-version: >= 1.9.2
 
 library
   hs-source-dirs: src
   ghc-options: -Wall -O2
-  default-extensions:
+  extensions:
       OverloadedStrings
-  default-language: Haskell98
   exposed-modules:
       Data.Aeson.Pointer
   build-depends:
@@ -32,9 +31,8 @@ test-suite tests
   type: exitcode-stdio-1.0
   hs-source-dirs: test
   ghc-options: -Wall -O2 -fno-warn-orphans
-  default-extensions:
+  extensions:
       OverloadedStrings
-  default-language: Haskell98
   main-is: Test.hs
   build-depends:
       aeson
@@ -51,5 +49,3 @@ test-suite tests
 source-repository head
   type: git
   location: git://github.com/mkscrg/aeson-pointer.git
-
--- TODO looser cabal version
