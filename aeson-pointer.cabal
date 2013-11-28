@@ -1,0 +1,56 @@
+name: aeson-pointer
+version: 0.0.0
+synopsis: JSON pointers over Aeson values, per RFC 6901
+-- description: TODO
+homepage: http://github.com/mkscrg/aeson-pointer
+license: BSD3
+license-file: LICENSE
+author: Mike Craig
+maintainer: mkscrg@gmail.com
+copyright: 2013 Mike Craig
+category: Text, Web, JSON
+build-type: Simple
+extra-source-files:
+    README.md
+cabal-version: >= 1.10
+
+library
+  hs-source-dirs: src
+  ghc-options: -Wall -O2
+  default-extensions:
+      OverloadedStrings
+  default-language: Haskell98
+  exposed-modules:
+      Data.Aeson.Pointer
+  build-depends:
+      aeson >= 0.6.2.1 && < 0.7
+    , base >= 4.6 && < 4.7
+    , text >= 0.11.3.1 && < 0.12
+    , vector >= 0.10.9.1 && < 0.11
+
+test-suite tests
+  type: exitcode-stdio-1.0
+  hs-source-dirs: test
+  ghc-options: -Wall -O2 -fno-warn-orphans
+  default-extensions:
+      OverloadedStrings
+  default-language: Haskell98
+  main-is: Test.hs
+  build-depends:
+      aeson
+    , aeson-pointer
+    , attoparsec
+    , base
+    , QuickCheck
+    , test-framework
+    , test-framework-quickcheck2
+    , text
+    , unordered-containers
+    , vector
+
+source-repository head
+  type: git
+  location: git://github.com/mkscrg/aeson-pointer.git
+
+-- TODO looser bounds
+-- TODO looser cabal version
