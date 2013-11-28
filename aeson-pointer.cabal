@@ -23,10 +23,10 @@ library
   exposed-modules:
       Data.Aeson.Pointer
   build-depends:
-      aeson >= 0.6.2.1 && < 0.7
-    , base >= 4.6 && < 4.7
-    , text >= 0.11.3.1 && < 0.12
-    , vector >= 0.10.9.1 && < 0.11
+      aeson == 0.6.*
+    , base == 4.*
+    , text >= 0.11.1.0
+    , vector >= 0.7.1
 
 test-suite tests
   type: exitcode-stdio-1.0
@@ -52,5 +52,4 @@ source-repository head
   type: git
   location: git://github.com/mkscrg/aeson-pointer.git
 
--- TODO looser bounds
 -- TODO looser cabal version
